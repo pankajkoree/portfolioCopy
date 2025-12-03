@@ -179,15 +179,15 @@ export default function Home() {
           <div>
             <Image
               src="/profile.png"
-              width={160}
-              height={160}
+              width={120}
+              height={120}
               alt="profile"
               className="rounded-full"
             />
           </div>
-          <div className="flex flex-col gap-2 mt-16">
+          <div className="flex flex-col gap-2 mt-8">
             <h2 className="text-3xl font-extrabold">Pankaj Kori</h2>
-            <p className="text-md text-gray-500 dark:text-gray-500 h-[24px]">
+            <p className="text-md text-gray-500 dark:text-gray-500 h-[20px]">
               {text}
               <span className="animate-pulse"></span>
             </p>
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
 
         {/* details section */}
-        <div className="flex flex-col px-6 py-4 gap-4">
+        <div className="flex flex-col px-6 py-4 gap-2">
           {/* designation */}
           <div className="flex gap-4">
             <svg
@@ -360,7 +360,7 @@ export default function Home() {
           </div>
         </div>
         {/* with and what i do */}
-        <div className="leading-relaxed p-4">
+        <div className="leading-relaxed p-4 line-spacing-4">
           I craft engaging and high-performance web applications using{" "}
           <Link href="https://nodejs.org/" target="_blank">
             {" "}
@@ -409,20 +409,19 @@ export default function Home() {
           </Link>
           . With a strong emphasis on clean UI and smooth user experience.
           Passionate about{" "}
-          <a
-            href="https://motion.dev/"
-            target="_blank"
-            className="hover:underline text-blue-500"
-          >
-            Motion
-          </a>
-          , and driven by a sharp eye for detail.
+          <Link href="https://motion.dev/" target="_blank">
+            <span className="inline-flex items-center gap-1 border border-yellow-500 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d] align-middle mt-1">
+              <Image src="/motion.svg" width={16} height={16} alt="motion" />
+              Motion
+            </span>
+          </Link>{" "}
+          and driven by a sharp eye for detail.
         </div>
 
         {/* get in touch */}
-        <div className="px-6 py-4 hover:cursor-pointer">
-          <Link href="/get-in-touch">
-            <Button>
+        <div className="px-6 py-4">
+          <Link href="/contacts">
+            <Button variant="more">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -454,7 +453,7 @@ export default function Home() {
               target="_blank"
               className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
-              <div className="grid grid-cols-[20%_70%_10%] items-center border">
+              <div className="grid grid-cols-[20%_70%_10%] items-center inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm">
                 <div className="flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -496,7 +495,7 @@ export default function Home() {
               target="_blank"
               className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
-              <div className="grid grid-cols-[20%_70%_10%] items-center border">
+              <div className="grid grid-cols-[20%_70%_10%] items-center inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm">
                 <div className="flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -540,7 +539,7 @@ export default function Home() {
               target="_blank"
               className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
-              <div className="grid grid-cols-[20%_70%_10%] items-center border">
+              <div className="grid grid-cols-[20%_70%_10%] items-center inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm">
                 <div className="flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -576,7 +575,7 @@ export default function Home() {
               target="_blank"
               className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
-              <div className="grid grid-cols-[20%_70%_10%] items-center border">
+              <div className="grid grid-cols-[20%_70%_10%] items-center inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm">
                 <div className="flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -728,6 +727,92 @@ export default function Home() {
               <p className="text-gray-500 text-sm">Butwal, Nepal</p>
             </div>
           </div>
+          <div className="flex justify-center mb-4">
+            <Link href="/experiences">
+              <Button variant="more">View more</Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* projects */}
+        <div className="flex flex-col px-6 py-4 gap-4 border">
+          {/* first two projects */}
+          <div className="grid grid-cols-2">
+            {/* products api project */}
+            <div className="border rounded-lg p-6">
+              {/* Image */}
+              <div className="mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-pink-400 via-pink-500 to-purple-600 p-8 h-48">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/productsAPI.png"
+                    width={420}
+                    height={180}
+                    alt="productsapi"
+                    className="rounded-lg rotate-x-45 -rotate-y-45 rotate-z-45"
+                  />
+                </div>
+              </div>
+
+              {/* Title with Links */}
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-lg font-semibold">Products API</h3>
+                <div className="flex gap-2">
+                  <Link
+                    href="https://ecommerce-frontend-products.vercel.app/"
+                    target="_blank"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                      <path d="M3.6 9h16.8" />
+                      <path d="M3.6 15h16.8" />
+                      <path d="M11.5 3a17 17 0 0 0 0 18" />
+                      <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="https://github.com/pankajkoree/ecommerce-frontend"
+                    target="_blank"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-gray-600">
+                Develop, Build, and Test your front-end instantly with our dummy
+                e-commerce API. Get ready-to-use JSON data for products, users,
+                carts, and more — no backend setup required.
+              </p>
+            </div>
+          </div>
+
+          {/* second two projects */}
+          <div></div>
         </div>
       </div>
 

@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+          "bg-primary text-primary-foreground shadow hover:bg-primary/90 hover:cursor-pointer",
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         submit:
@@ -21,6 +21,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         nav: "text-[18px] font-bold underline-offset-4 hover:underline text-gray-700 hover:cursor-pointer dark:text-white hover:text-cyan-600 dark:hover:text-cyan-600",
+        more: "border rounded-sm inset-shadow-sm shadow-sm shadow-blue-300 inset-shadow-gray-300 bg-[#e7ecef] dark:bg-[#343a40] hover:cursor-pointer",
       },
       size: {
         default: "h-9 px-4 py-2",
