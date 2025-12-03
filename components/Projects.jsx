@@ -1,489 +1,309 @@
-import Image from "next/image";
+import Image from "next/image"
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
 
 const Projects = () => {
-  const handleCurrencyConvertor = () => {
-    window.open(
-      "https://currencyconvertorreactapp.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleShoe = () => {
-    window.open(
-      "https://theshoecompany-tailwind.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleMovie = () => {
-    window.open(
-      "https://moviesearchappomdb.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleFocus = () => {
-    window.open(
-      "https://focusontoday-tan.vercel.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleCountry = () => {
-    window.open(
-      "https://countryproject-manual-deploy.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleBurger = () => {
-    window.open(
-      "https://hamburgermenuappnweb.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleWeatherApp = () => {
-    window.open(
-      "https://weatherappchallengejs.netlify.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleTesla = () => {
-    window.open(
-      "https://dashboard-tesla-ui.vercel.app/dashboard",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  const handleEcommerce = () => {
-    window.open(
-      "https://ecommerce-frontend-products.vercel.app/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
   return (
-    <div className="relative flex flex-col w-full">
-      {/* Navbar heading */}
-      <h1 className="text-xl font-bold">Projects</h1>
-      {/* end Navbar heading */}
+    <div className="flex flex-col px-6 py-4 gap-4">
+      <div>
+        <p className="text-2xl">Projects</p>
+      </div>
+      {/* first two projects */}
+      <div className="grid grid-cols-2 gap-6">
+        {/* products api project */}
+        <div className="border rounded-lg">
+          {/* Image */}
+          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
+            <Image
+              src="/productsAPI-high.jpg"
+              width={400}
+              height={240}
+              alt="productsapi"
+              quality={100}
+              priority
+              className="ml-16 mt-20 rotate-x-12 rotate-y-12 -rotate-z-8 shadow-lg shadow-black will-change-transform backface-hidden"
+            />
+          </div>
 
-      {/* projects */}
-      <div className="relative flex flex-col">
-        {/* fullstack project */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleEcommerce}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>Ecommerce Products API</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://github.com/pankajkoree/ecommerce-frontend"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
+          {/* Title with Links */}
+          <div className="flex justify-between items-start mb-4 px-2">
+            <h3 className="text-lg font-semibold">Products API</h3>
+            <div className="flex gap-2">
               <Link
                 href="https://ecommerce-frontend-products.vercel.app/"
                 target="_blank"
               >
-                <p className="hover:text-cyan-600">Live </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M3.6 9h16.8" />
+                  <path d="M3.6 15h16.8" />
+                  <path d="M11.5 3a17 17 0 0 0 0 18" />
+                  <path d="M12.5 3a17 17 0 0 1 0 18" />
+                </svg>
+              </Link>
+              <Link
+                href="https://github.com/pankajkoree/ecommerce-frontend"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
               </Link>
             </div>
           </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Develop, Build, and Test your front-end instantly with our dummy
-              e-commerce API. Get ready-to-use JSON data for products, users,
-              carts, and more — no backend setup required.
-            </p>
+
+          {/* Description */}
+          <p className="text-sm text-gray-600 px-2 pb-2">
+            Develop, Build, and Test your front-end instantly with our dummy
+            e-commerce API. Get ready-to-use JSON data for products, users,
+            carts, and more — no backend setup required.
+          </p>
+        </div>
+
+        {/* the shoe company */}
+        <div className="border rounded-lg">
+          {/* Image */}
+          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
-              src="/products.png"
-              alt="currency convertor"
-              width={80}
-              height={80}
+              src="/theshoecompany.png"
+              width={400}
+              height={240}
+              alt="productsapi"
+              quality={100}
+              priority
+              className="ml-16 mt-20 rotate-x-12 rotate-y-12 -rotate-z-8 shadow-lg shadow-black will-change-transform backface-hidden"
             />
           </div>
-          {/* end description and image */}
-        </div>
-        {/* end fullstack project */}
 
-        {/* project 1 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleCurrencyConvertor}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>Currency Converter</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Live </p>
-              </Link>
-            </div>
-          </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Supports 34 global currencies, provides live exchange rates with
-              accuracy, and is optimized for quick conversions.
-            </p>
-            <Image
-              src="/currencyconvertor.png"
-              alt="currency convertor"
-              width={80}
-              height={80}
-            />
-          </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 1 */}
-
-        {/* project 2 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleShoe}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>The Shoe Company</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
+          {/* Title with Links */}
+          <div className="flex justify-between items-start mb-4 px-2">
+            <h3 className="text-lg font-semibold">The Shoe Company</h3>
+            <div className="flex gap-2">
               <Link
                 href="https://theshoecompany-tailwind.netlify.app/"
                 target="_blank"
               >
-                <p className="hover:text-cyan-600">Live </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M3.6 9h16.8" />
+                  <path d="M3.6 15h16.8" />
+                  <path d="M11.5 3a17 17 0 0 0 0 18" />
+                  <path d="M12.5 3a17 17 0 0 1 0 18" />
+                </svg>
+              </Link>
+              <Link
+                href="https://github.com/pankajkoree/Tailwind/tree/main/02_Project"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
               </Link>
             </div>
           </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Durable, comfortable footwear for all occasions with fast,
-              reliable delivery.
-            </p>
 
+          {/* Description */}
+          <p className="text-sm text-gray-600 px-2 pb-2">
+            Durable, comfortable footwear for all occasions with fast, reliable
+            delivery.
+          </p>
+        </div>
+      </div>
+
+      {/* second two projects */}
+      <div className="grid grid-cols-2 gap-6">
+        {/* the hamburger */}
+        <div className="border rounded-lg">
+          {/* Image */}
+          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
-              src="/theshoecompany.png"
-              alt="the shoe company"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
+              src="/thehamburger.png"
+              width={400}
+              height={240}
+              alt="productsapi"
+              quality={100}
+              priority
+              className="ml-16 mt-20 rotate-x-12 rotate-y-12 -rotate-z-8 shadow-lg shadow-black will-change-transform backface-hidden"
             />
           </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 2 */}
 
-        {/* project 3 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleMovie}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>Movie Details Search</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
-              <Link
-                href="https://moviesearchappomdb.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Live </p>
-              </Link>
-            </div>
-          </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Search movies by title, genre, or actor with ratings and reviews —
-              optimized for fast, accurate results.
-            </p>
-
-            <Image
-              src="/moviedetailssearch.png"
-              alt="movie details search"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
-            />
-          </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 3 */}
-
-        {/* project 4 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleFocus}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>Focus On Today</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://github.com/pankajkoree/focusontoday"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
-              <Link href="https://focusontoday-tan.vercel.app/" target="_blank">
-                <p className="hover:text-cyan-600">Live </p>
-              </Link>
-            </div>
-          </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Focus on your top task, break it into steps, and review progress
-              by day&apos;s end to mark it complete.
-            </p>
-
-            <Image
-              src="/focusontoday.png"
-              alt="focus on today"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
-            />
-          </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 4 */}
-
-        {/* project 5 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleCountry}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>The Country Project</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
-              <Link
-                href="https://countryproject-manual-deploy.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Live </p>
-              </Link>
-            </div>
-          </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Detailed economic info with live GDP, inflation, and growth data —
-              optimized for exploring stats over time.
-            </p>
-
-            <Image
-              src="/thecountryproject.png"
-              alt="The Country Project"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
-            />
-          </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 5 */}
-
-        {/* project 6 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleBurger}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>The HamBurger</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
+          {/* Title with Links */}
+          <div className="flex justify-between items-start mb-4 px-2">
+            <h3 className="text-lg font-semibold">The HamBurger</h3>
+            <div className="flex gap-2">
               <Link
                 href="https://hamburgermenuappnweb.netlify.app/"
                 target="_blank"
               >
-                <p className="hover:text-cyan-600">Live </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M3.6 9h16.8" />
+                  <path d="M3.6 15h16.8" />
+                  <path d="M11.5 3a17 17 0 0 0 0 18" />
+                  <path d="M12.5 3a17 17 0 0 1 0 18" />
+                </svg>
+              </Link>
+              <Link
+                href="https://github.com/pankajkoree/react/tree/main/JS/codes/48_hamburgerMenu"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
               </Link>
             </div>
           </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Made with 100% fresh chicken patties, perfectly grilled for
-              maximum flavor, and customizable with a variety of toppings.
-            </p>
 
+          {/* Description */}
+          <p className="text-sm text-gray-600 px-2 pb-2">
+            Made with 100% fresh chicken patties, perfectly grilled for maximum
+            flavor, and customizable with a variety of toppings.
+          </p>
+        </div>
+
+        {/* currency convertor */}
+        <div className="border rounded-lg">
+          {/* Image */}
+          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
-              src="/thehamburger.png"
-              alt="thehamburger"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
+              src="/currencyconvertor.png"
+              width={400}
+              height={240}
+              alt="productsapi"
+              quality={100}
+              priority
+              className="ml-16 mt-20 rotate-x-12 rotate-y-12 -rotate-z-8 shadow-lg shadow-black will-change-transform backface-hidden"
             />
           </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 6 */}
 
-        {/* project 7 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleWeatherApp}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>The Weather App</p>
-            </div>
-            <div className="relative flex gap-4">
+          {/* Title with Links */}
+          <div className="flex justify-between items-start mb-4 px-2">
+            <h3 className="text-lg font-semibold">Currency Convertor</h3>
+            <div className="flex gap-2">
               <Link
                 href="https://currencyconvertorreactapp.netlify.app/"
                 target="_blank"
               >
-                <p className="hover:text-cyan-600">Github </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M3.6 9h16.8" />
+                  <path d="M3.6 15h16.8" />
+                  <path d="M11.5 3a17 17 0 0 0 0 18" />
+                  <path d="M12.5 3a17 17 0 0 1 0 18" />
+                </svg>
               </Link>
               <Link
-                href="https://weatherappchallengejs.netlify.app/"
+                href="https://github.com/pankajkoree/react/tree/main/ReactJSFreshStart/04currencyConvertor"
                 target="_blank"
               >
-                <p className="hover:text-cyan-600">Live </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
               </Link>
             </div>
           </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Provides real-time weather updates for any location, with accurate
-              hourly and daily forecasts — optimized for fast and easy tracking.
-            </p>
 
-            <Image
-              src="/theweatherapp.png"
-              alt="The Weather App"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
-            />
-          </div>
-          {/* end description and image */}
+          {/* Description */}
+          <p className="text-sm text-gray-600 px-2 pb-2">
+            Supports 34 global currencies, provides live exchange rates with
+            accuracy, and is optimized for quick conversions.
+          </p>
         </div>
-        {/* end project 7 */}
-
-        {/* project 8 */}
-        <div
-          className="relative flex flex-col p-2 transition-transform duration-300 ease-in-out hover:translate-x-2 hover:cursor-pointer"
-          onClick={handleTesla}
-        >
-          {/* title and navigation */}
-          <div className="relative flex w-full justify-between">
-            <div className="font-semibold">
-              <p>Dashboard App</p>
-            </div>
-            <div className="relative flex gap-4">
-              <Link
-                href="https://currencyconvertorreactapp.netlify.app/"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Github </p>
-              </Link>
-              <Link
-                href="https://dashboard-tesla-ui.vercel.app/dashboard"
-                target="_blank"
-              >
-                <p className="hover:text-cyan-600">Live </p>
-              </Link>
-            </div>
-          </div>
-          {/* end title and navigation */}
-          {/* description and image */}
-          <div className="ralative flex items-center">
-            <p>
-              Track and manage topics of interest in real time, receive timely
-              updates and insights, all through a simple and intuitive
-              interface.
-            </p>
-
-            <Image
-              src="/thedashboard.png"
-              alt="Dashboard App"
-              width={80}
-              height={80}
-              className="rounded-full object-cover"
-            />
-          </div>
-          {/* end description and image */}
-        </div>
-        {/* end project 8 */}
       </div>
-      {/* end projects */}
+
+      <div className="flex justify-center mb-4">
+        <Link href="/projects">
+          <Button variant="more">View more</Button>
+        </Link>
+      </div>
     </div>
   );
 };
