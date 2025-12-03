@@ -89,7 +89,6 @@ export default function Home() {
 
   // sound effect for theme change
   const audioRef = useRef(null);
-
   useEffect(() => {
     audioRef.current = new Audio("/sound.wav");
   }, []);
@@ -111,9 +110,9 @@ export default function Home() {
   }
   return (
     <div className="relative w-full">
-      <div className="relative mx-auto lg:w-[40%] border top-1">
+      <div className="relative mx-auto lg:w-[40%] border">
         {/* complete nav bar */}
-        <div className="hidden sm:flex sticky top-0 z-50 lg:grid grid-cols-[25%_65%_10%] px-4 py-2 items-center">
+        <div className="hidden sm:flex sticky top-0 z-50 lg:grid grid-cols-[25%_65%_10%] px-4 py-2 items-center backdrop-blur-xl">
           {/* logo div */}
           <div className={`${pacifico.className} text-xl`}>
             <Link href="/">
@@ -128,7 +127,7 @@ export default function Home() {
           <div className="flex justify-end">
             <div onClick={playShutter} className="hover:cursor-pointer">
               {isDarkMode ? (
-                <div className="flex inset-shadow-sm inset-shadow-green-200 rounded-sm p-2 hover:bg-[#343b42]">
+                <div className="flex inset-shadow-sm inset-shadow-gray-200 rounded-sm p-2 hover:bg-[#4778ad]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -188,7 +187,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-2 mt-16">
             <h2 className="text-3xl font-extrabold">Pankaj Kori</h2>
-            <p className="text-md text-gray-600 dark:text-gray-400 h-[24px]">
+            <p className="text-md text-gray-500 dark:text-gray-500 h-[24px]">
               {text}
               <span className="animate-pulse"></span>
             </p>
@@ -360,6 +359,65 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* with and what i do */}
+        <div className="leading-relaxed p-4">
+          I craft engaging and high-performance web applications using{" "}
+          <Link href="https://nodejs.org/" target="_blank">
+            {" "}
+            <span className="inline-flex items-center gap-1 border border-green-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
+              <Image src="/nodejs.svg" width={16} height={16} alt="nodejs" />
+              Node.js
+            </span>{" "}
+            ,{" "}
+          </Link>
+          <Link href="https://nextjs.org/" target="_blank">
+            <span className="inline-flex items-center gap-1 border border-gray-700 dark:border-white border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
+              <Image src="/nextjs.svg" width={16} height={16} alt="nextjs" />
+              Next.js
+            </span>{" "}
+            ,{" "}
+          </Link>
+          <Link href="https://expressjs.com/" target="_blank">
+            <span className="inline-flex items-center gap-1 border border-[#F56127] border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
+              <Image
+                src="/expressjs.svg"
+                width={16}
+                height={16}
+                alt="express"
+              />
+              Express.js
+            </span>{" "}
+            ,{" "}
+          </Link>
+          <Link href="https://www.typescriptlang.org/" target="_blank">
+            <span className="inline-flex items-center gap-1 border border-blue-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
+              <Image
+                src="/typescript.svg"
+                width={16}
+                height={16}
+                alt="typescript"
+              />
+              TypeScript
+            </span>{" "}
+          </Link>
+          and{" "}
+          <Link href="https://www.mongodb.com/" target="_blank">
+            <span className="inline-flex items-center gap-1 border border-green-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
+              <Image src="/mongodb.svg" width={16} height={16} alt="mongodb" />
+              MongoDB
+            </span>{" "}
+          </Link>
+          . With a strong emphasis on clean UI and smooth user experience.
+          Passionate about{" "}
+          <a
+            href="https://motion.dev/"
+            target="_blank"
+            className="hover:underline text-blue-500"
+          >
+            Motion
+          </a>
+          , and driven by a sharp eye for detail.
+        </div>
 
         {/* get in touch */}
         <div className="px-6 py-4 hover:cursor-pointer">
@@ -394,7 +452,7 @@ export default function Home() {
             <a
               href="https://x.com/iampankajkoree"
               target="_blank"
-              className="hover:bg-[#ebeaea]"
+              className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
               <div className="grid grid-cols-[20%_70%_10%] items-center border">
                 <div className="flex justify-center">
@@ -434,9 +492,9 @@ export default function Home() {
 
             {/* github */}
             <a
-              href="https://x.com/iampankajkoree"
+              href="https://github.com/pankajkoree"
               target="_blank"
-              className="hover:bg-[#ebeaea]"
+              className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
               <div className="grid grid-cols-[20%_70%_10%] items-center border">
                 <div className="flex justify-center">
@@ -450,16 +508,15 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
                   </svg>
                 </div>
                 <div>
-                  <p> X (formerly Twitter)</p>
-                  <p>@iampankajkoree</p>
+                  <p>Github</p>
+                  <p>pankajkoree</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -477,11 +534,11 @@ export default function Home() {
 
           {/* linkedin and youtube */}
           <div className="grid grid-cols-2 gap-4">
-            {/* x */}
+            {/* linkedIn */}
             <a
-              href="https://x.com/iampankajkoree"
+              href="https://www.linkedin.com/in/pankaj-koree/"
               target="_blank"
-              className="hover:bg-[#ebeaea]"
+              className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
               <div className="grid grid-cols-[20%_70%_10%] items-center border">
                 <div className="flex justify-center">
@@ -490,21 +547,15 @@ export default function Home() {
                     width="64"
                     height="64"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
+                    fill="#0A66C2"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
                   </svg>
                 </div>
                 <div>
-                  <p> X (formerly Twitter)</p>
-                  <p>@iampankajkoree</p>
+                  <p>LinkedIn</p>
+                  <p>pankaj-koree</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -519,11 +570,11 @@ export default function Home() {
               </div>
             </a>
 
-            {/* github */}
+            {/* youtube */}
             <a
-              href="https://x.com/iampankajkoree"
+              href="https://www.youtube.com/@pankajkori"
               target="_blank"
-              className="hover:bg-[#ebeaea]"
+              className="hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]"
             >
               <div className="grid grid-cols-[20%_70%_10%] items-center border">
                 <div className="flex justify-center">
@@ -532,21 +583,16 @@ export default function Home() {
                     width="64"
                     height="64"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
+                    fill="#bd2e2e"
+                    className="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
                   </svg>
                 </div>
                 <div>
-                  <p> X (formerly Twitter)</p>
-                  <p>@iampankajkoree</p>
+                  <p>Youtube</p>
+                  <p>@pankajkori</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -563,48 +609,125 @@ export default function Home() {
           </div>
         </div>
 
-        {/* with and what i do */}
-        <div className="leading-relaxed p-4">
-          I craft engaging and high-performance web applications using{" "}
-          <span className="inline-flex items-center gap-1 border border-green-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
-            <Image src="/nodejs.svg" width={16} height={16} alt="nodejs" />
-            Node.js
-          </span>{" "}
-          ,{" "}
-          <span className="inline-flex items-center gap-1 border border-gray-700 dark:border-white border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
-            <Image src="/nextjs.svg" width={16} height={16} alt="nextjs" />
-            Next.js
-          </span>{" "}
-          ,{" "}
-          <span className="inline-flex items-center gap-1 border border-[#F56127] border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
-            <Image src="/expressjs.svg" width={16} height={16} alt="express" />
-            Express.js
-          </span>{" "}
-          ,{" "}
-          <span className="inline-flex items-center gap-1 border border-blue-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
-            <Image
-              src="/typescript.svg"
-              width={16}
-              height={16}
-              alt="typescript"
-            />
-            TypeScript
-          </span>{" "}
-          and{" "}
-          <span className="inline-flex items-center gap-1 border border-green-300 border-dashed px-1 py-0.5 rounded-sm bg-[#f4f5f3] dark:bg-[#33414d]">
-            <Image src="/mongodb.svg" width={16} height={16} alt="mongodb" />
-            MongoDB
-          </span>{" "}
-          . With a strong emphasis on clean UI and smooth user experience.
-          Passionate about{" "}
-          <a
-            href="https://motion.dev/"
-            target="_blank"
-            className="hover:underline text-blue-500"
-          >
-            Motion
-          </a>
-          , and driven by a sharp eye for detail.
+        {/* experience */}
+        <div>
+          {/* job */}
+          <div className="flex px-6 py-4">
+            <p className="text-2xl">Experience</p>
+          </div>
+          <div className="flex px-6">
+            <p className="text-xl">Job</p>
+          </div>
+          <div className="grid grid-cols-[10%_60%_30%] px-6 py-4 items-center">
+            {/* logo */}
+            <div className="flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="#008900"
+                className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
+              </svg>
+            </div>
+            {/* company and position */}
+            <div>
+              <div className="flex gap-4">
+                {" "}
+                <span className="blur">xxxxxxxx</span>
+                <span className="flex items-center bg-green-100 dark:bg-green-950 rounded-sm px-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="#2af31b"
+                    className="icon icon-tabler icons-tabler-filled icon-tabler-point"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+                  </svg>
+                  <p>Working</p>
+                </span>
+              </div>
+              <div className="text-gray-500 text-sm">
+                <p>Junior Fullstack Developer</p>
+              </div>
+            </div>
+            {/* from-to and location */}
+            <div className="flex flex-col justify-self-end">
+              <p>August 2025 - Present</p>
+              <p className="text-gray-500 text-sm">Bangladesh (Remote)</p>
+            </div>
+          </div>
+
+          <div className="flex px-6">
+            <p className="text-xl">Internships</p>
+          </div>
+          {/* internships */}
+          <div className="grid grid-cols-[10%_60%_30%] px-6 py-4 items-center">
+            {/* logo */}
+            <div className="flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="#896573"
+                className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
+              </svg>
+            </div>
+            {/* company and position */}
+            <div>
+              <div className="flex gap-4">
+                <p>Kalinga University</p>
+              </div>
+              <div className="text-gray-500 text-sm">
+                <p>Artificial Intelligence and Machine Learning Intern</p>
+              </div>
+            </div>
+            {/* from-to and location */}
+            <div className="flex flex-col justify-self-end">
+              <p>May 2023 - July 2023</p>
+              <p className="text-gray-500 text-sm">Raipur, India</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[10%_60%_30%] px-6 py-4 items-center">
+            {/* logo */}
+            <div className="flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="#323412"
+                className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
+              </svg>
+            </div>
+            {/* company and position */}
+            <div>
+              <div className="flex gap-4">
+                <p>Micro World Educational Hub</p>
+              </div>
+              <div className="text-gray-500 text-sm">
+                <p>Frontend Intern</p>
+              </div>
+            </div>
+            {/* from-to and location */}
+            <div className="flex flex-col justify-self-end">
+              <p>April 2019 - July 2019</p>
+              <p className="text-gray-500 text-sm">Butwal, Nepal</p>
+            </div>
+          </div>
         </div>
       </div>
 
