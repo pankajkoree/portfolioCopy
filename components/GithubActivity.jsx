@@ -125,7 +125,7 @@ export default function GitHubHeatmap() {
               top: tooltip.y - 28,
             }}
           >
-            <div className="bg-zinc-900 text-white text-[11px] px-2 py-1 rounded shadow-lg border border-zinc-700">
+            <div className="bg-zinc-900 dark:bg-white text-white dark:text-black text-[11px] px-2 py-1 rounded shadow-lg border border-blue-700 dark:border-blue-400">
               <strong>{tooltip.contributionCount}</strong>{" "}
               {tooltip.contributionCount === 1
                 ? "contribution"

@@ -20,6 +20,7 @@ import HonorsAndAwards from "@/components/HonorsAndAwards";
 import Certifications from "@/components/Certifications";
 import GitHubHeatmap from "@/components/GithubActivity";
 import TechStack from "@/components/TechStack";
+import Footer from "@/components/Footer";
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -226,6 +227,9 @@ export default function Home() {
 
         {/* Certifications */}
         <Certifications />
+
+        {/* Footer */}
+        <Footer />
       </div>
 
       {/* toaster for notification */}
