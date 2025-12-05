@@ -26,13 +26,18 @@ export default function GitHubHeatmap() {
 
   if (error)
     return (
-      <div className="text-red-500 bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
-        {error}
+      <div className="flex flex-col px-6 py-4 gap-4">
+        <div>
+          <p className="text-2xl">Github Activity</p>
+        </div>
+        <div className="text-red-500 bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+          {error}
+        </div>
       </div>
     );
 
   return (
-    <div className="flex flex-col px-6 py-4 gap-4 ">
+    <div className="flex flex-col px-6 py-4 gap-4 border">
       <div>
         <p className="text-2xl">Github Activity</p>
       </div>
@@ -154,19 +159,24 @@ export default function GitHubHeatmap() {
 /* ✅ Skeleton Loader */
 function Skeleton() {
   return (
-    <div className="bg-white dark:bg-zinc-900 px-6 py-4 rounded-xl shadow animate-pulse w-fit">
-      <div className="h-4 w-48 bg-zinc-200 dark:bg-zinc-800 rounded mb-4" />
-      <div className="grid grid-flow-col auto-cols-max gap-[2px]">
-        {Array.from({ length: 52 }).map((_, i) => (
-          <div key={i} className="flex flex-col gap-[2px]">
-            {Array.from({ length: 7 }).map((_, j) => (
-              <div
-                key={j}
-                className="w-[10px] h-[10px] rounded-md bg-zinc-200 dark:bg-zinc-800"
-              />
-            ))}
-          </div>
-        ))}
+    <div className="flex flex-col px-6 py-4 gap-4">
+      <div>
+        <p className="text-2xl">Github Activity</p>
+      </div>
+      <div className="bg-white dark:bg-zinc-900 px-6 py-4 rounded-xl shadow animate-pulse w-fit">
+        <div className="h-4 w-48 bg-zinc-200 dark:bg-zinc-800 rounded mb-4" />
+        <div className="grid grid-flow-col auto-cols-max gap-[2px]">
+          {Array.from({ length: 52 }).map((_, i) => (
+            <div key={i} className="flex flex-col gap-[2px]">
+              {Array.from({ length: 7 }).map((_, j) => (
+                <div
+                  key={j}
+                  className="w-[10px] h-[10px] rounded-md bg-zinc-200 dark:bg-zinc-800"
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
