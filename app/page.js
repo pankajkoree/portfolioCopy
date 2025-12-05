@@ -17,6 +17,9 @@ import GetInTouch from "@/components/GetInTouch";
 import WhatIDo from "@/components/WhatIDo";
 import Details from "@/components/Details";
 import HonorsAndAwards from "@/components/HonorsAndAwards";
+import Certifications from "@/components/Certifications";
+import GitHubHeatmap from "@/components/GithubActivity";
+import TechStack from "@/components/TechStack";
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -206,6 +209,12 @@ export default function Home() {
         {/* socials */}
         <Socials />
 
+        {/* github */}
+        <GitHubHeatmap />
+
+        {/* tech stach */}
+        <TechStack />
+
         {/* experience */}
         <Experience />
 
@@ -216,7 +225,9 @@ export default function Home() {
         <HonorsAndAwards />
 
         {/* Certifications */}
-        <div className="flex flex-col px-6 py-4 gap-4"></div>
+        <Certifications />
+
+        
       </div>
 
       {/* toaster for notification */}

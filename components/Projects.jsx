@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -11,7 +11,7 @@ const Projects = () => {
       {/* first two projects */}
       <div className="grid grid-cols-2 gap-6">
         {/* products api project */}
-        <div className="border rounded-lg">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
           <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
@@ -75,7 +75,7 @@ const Projects = () => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 px-2 pb-2">
+          <p className="text-sm text-gray-500 px-2 pb-2">
             Develop, Build, and Test your front-end instantly with our dummy
             e-commerce API. Get ready-to-use JSON data for products, users,
             carts, and more — no backend setup required.
@@ -83,7 +83,7 @@ const Projects = () => {
         </div>
 
         {/* the shoe company */}
-        <div className="border rounded-lg">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
           <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
@@ -147,7 +147,7 @@ const Projects = () => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 px-2 pb-2">
+          <p className="text-sm text-gray-500 px-2 pb-2">
             Durable, comfortable footwear for all occasions with fast, reliable
             delivery.
           </p>
@@ -157,7 +157,7 @@ const Projects = () => {
       {/* second two projects */}
       <div className="grid grid-cols-2 gap-6">
         {/* the hamburger */}
-        <div className="border rounded-lg">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
           <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
@@ -221,14 +221,14 @@ const Projects = () => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 px-2 pb-2">
+          <p className="text-sm text-gray-500 px-2 pb-2">
             Made with 100% fresh chicken patties, perfectly grilled for maximum
             flavor, and customizable with a variety of toppings.
           </p>
         </div>
 
         {/* currency convertor */}
-        <div className="border rounded-lg">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
           <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
@@ -292,7 +292,7 @@ const Projects = () => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 px-2 pb-2">
+          <p className="text-sm text-gray-500 px-2 pb-2">
             Supports 34 global currencies, provides live exchange rates with
             accuracy, and is optimized for quick conversions.
           </p>

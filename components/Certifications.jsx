@@ -2,26 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-const HonorsAndAwards = () => {
+const Certifications = () => {
   return (
     <div className="flex flex-col px-6 py-4 gap-4">
       <div>
-        <p className="text-2xl">Awards</p>
+        <p className="text-2xl">Certifications</p>
       </div>
-      {/* poster presentation */}
+      {/* aiml internship */}
       <div className="grid grid-cols-[10%_80%_10%] border items-center px-2 py-1 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
         <div>
-          <Image src="/awards.svg" width={64} height={64} alt="awards" />
+          <Image src="/certificate.svg" width={64} height={64} alt="awards" />
         </div>
         <div>
-          <p>First place in poster presentation</p>
+          <p>Artificial Intelligence and Machine Learning</p>
           <p className="text-sm text-gray-500">
-            Best Paper/Poster Award | 4-5th May 2022 | Kalinga University
+            Central Instrumentation Facility, Kalinga University | 23rd May 2023
+            - 6th July 2023
           </p>
         </div>
 
         <Link
-          href="https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view?usp=sharing"
+          href="https://drive.google.com/file/d/1wPdWO1HeKED38RpD9Ll8MpeEVqqtb08K/view?usp=drive_link"
           target="_blank"
         >
           <div className="relative group inline-block">
@@ -42,22 +43,20 @@ const HonorsAndAwards = () => {
           </div>
         </Link>
       </div>
-      {/* project presentation */}
+      {/* frontend sololearn */}
       <div className="grid grid-cols-[10%_80%_10%] border items-center px-2 py-1 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
         <div>
-          <Image src="/awards.svg" width={64} height={64} alt="awards" />
+          <Image src="/certificate.svg" width={64} height={64} alt="awards" />
         </div>
         <div>
-          <p>Digital Mental Health Interventions and Wellness</p>
+          <p>Frontend for Beginners</p>
           <p className="text-sm text-gray-500">
-            Project Presentation | 27th - 28th March 2025 | International
-            Conference on Emerging Technologies for Sustainable Innovation,
-            Management and Development (ICETSIMD 2025)
+            Sololearn - Angular Team at Google | 02 Jan 2024
           </p>
         </div>
 
         <Link
-          href="https://drive.google.com/file/d/1HhwRV5D7yyQkSlHOH0i8MLZlHMBtQ-Pa/view?usp=sharing"
+          href="https://www.sololearn.com/certificates/CC-COU1CXBM"
           target="_blank"
         >
           <div className="relative group inline-block">
@@ -78,21 +77,18 @@ const HonorsAndAwards = () => {
           </div>
         </Link>
       </div>{" "}
-      {/* iee seminar */}
+      {/* freecodecamp */}
       <div className="grid grid-cols-[10%_80%_10%] border items-center px-2 py-1 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
         <div>
-          <Image src="/awards.svg" width={64} height={64} alt="awards" />
+          <Image src="/certificate.svg" width={64} height={64} alt="awards" />
         </div>
         <div>
-          <p>IEEE Summit</p>
-          <p className="text-sm text-gray-500">
-            Certificate of Participation | 25th - 26th August 2023 | IEEE Women
-            in Engineering (WIE) International Leadership Summit (ILS) 2023
-          </p>
+          <p>Legacy Responsive Web Design V8</p>
+          <p className="text-sm text-gray-500">FreeCodeCamp | 14th Feb 2024</p>
         </div>
 
         <Link
-          href="https://drive.google.com/file/d/1aIfmrcdkMM4ZXiwUiQqhOTgSn0_UtqI_/view?usp=drive_link"
+          href="https://www.freecodecamp.org/certification/pankaj_koree/responsive-web-design"
           target="_blank"
         >
           <div className="relative group inline-block">
@@ -114,7 +110,7 @@ const HonorsAndAwards = () => {
         </Link>
       </div>{" "}
       <div className="flex justify-center mb-4">
-        <Link href="/awards">
+        <Link href="/certifications">
           <Button variant="more">View more</Button>
         </Link>
       </div>
@@ -122,4 +118,4 @@ const HonorsAndAwards = () => {
   );
 };
 
-export default HonorsAndAwards;
+export default Certifications;
