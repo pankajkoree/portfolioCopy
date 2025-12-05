@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Experience = () => {
   return (
-    <div>
+    <div className="border-b">
       {/* job */}
       <div className="flex px-6 py-4">
         <p className="text-2xl">Experience</p>

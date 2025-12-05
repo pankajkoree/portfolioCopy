@@ -13,7 +13,7 @@ const Details = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col px-6 py-4 gap-2">
+    <div className="flex flex-col px-6 py-4 gap-2 border-b">
       {/* designation */}
       <div className="flex gap-4">
         <svg

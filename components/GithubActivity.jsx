@@ -26,7 +26,7 @@ export default function GitHubHeatmap() {
 
   if (error)
     return (
-      <div className="flex flex-col px-6 py-4 gap-4">
+      <div className="flex flex-col px-6 py-4 gap-4 border-b">
         <div>
           <p className="text-2xl">Github Activity</p>
         </div>
@@ -37,7 +37,7 @@ export default function GitHubHeatmap() {
     );
 
   return (
-    <div className="flex flex-col px-6 py-4 gap-4 border">
+    <div className="flex flex-col px-6 py-4 gap-4 border-b">
       <div>
         <p className="text-2xl">Github Activity</p>
       </div>
@@ -159,7 +159,7 @@ export default function GitHubHeatmap() {
 /* ✅ Skeleton Loader */
 function Skeleton() {
   return (
-    <div className="flex flex-col px-6 py-4 gap-4">
+    <div className="flex flex-col px-6 py-4 gap-4 border-b">
       <div>
         <p className="text-2xl">Github Activity</p>
       </div>

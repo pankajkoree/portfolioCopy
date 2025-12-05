@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const GetInTouch = () => {
   return (
-    <div className="px-6 py-4">
+    <div className="px-6 py-4 border-b">
           <Link href="/contacts">
             <Button variant="more">
               <svg

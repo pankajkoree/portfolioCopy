@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Certifications = () => {
   return (
-    <div className="flex flex-col px-6 py-4 gap-4">
+    <div className="flex flex-col px-6 py-4 gap-4 border-b">
       <div>
         <p className="text-2xl">Certifications</p>
       </div>

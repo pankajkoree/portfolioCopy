@@ -115,7 +115,7 @@ export default function Home() {
     <div className="relative w-full">
       <div className="relative mx-auto lg:w-[40%] border">
         {/* complete nav bar */}
-        <div className="hidden sm:flex sticky top-0 z-50 lg:grid grid-cols-[25%_65%_10%] px-4 py-2 items-center backdrop-blur-xl">
+        <div className="hidden sm:flex sticky top-0 z-50 lg:grid grid-cols-[25%_65%_10%] px-4 py-2 items-center backdrop-blur-xl border-b">
           {/* logo div */}
           <div className={`${pacifico.className} text-xl`}>
             <Link href="/">
@@ -171,14 +171,14 @@ export default function Home() {
         </div>
 
         {/* logo full */}
-        <div className="relative flex justify-center p-4 top-4">
+        <div className="relative flex justify-center px-6 py-4 top-4 border-b">
           <div className={`${pacifico.className} text-8xl`}>
             <h1>PK</h1>
           </div>
         </div>
 
         {/* name and profile picture */}
-        <div className="flex items-center gap-6 p-4">
+        <div className="flex items-center gap-6 px-6 py-4 mt-4 border-b">
           <div>
             <Image
               src="/profile.png"
@@ -226,8 +226,6 @@ export default function Home() {
 
         {/* Certifications */}
         <Certifications />
-
-        
       </div>
 
       {/* toaster for notification */}

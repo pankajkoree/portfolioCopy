@@ -2,7 +2,7 @@ import React from "react";
 
 const Socials = () => {
   return (
-    <div className="flex flex-col px-6 py-4 gap-4">
+    <div className="flex flex-col px-6 py-4 gap-4 border-b">
       {/* x and github */}
       <div className="grid grid-cols-2 gap-4">
         {/* x */}
