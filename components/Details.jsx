@@ -59,7 +59,7 @@ const Details = () => {
           <path d="M9.7 17l4.6 0" />
         </svg>
         <p>
-          Founder @{" "}
+          Founder @
           <a
             href="https://www.npmjs.com/package/@pankaj.koree/pkui"
             target="_blank"
