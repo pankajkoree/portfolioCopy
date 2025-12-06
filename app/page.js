@@ -78,7 +78,7 @@ export default function Home() {
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, currentIndex]);
+  }, [text, isDeleting, currentIndex, designationItems]);
 
   const [dateTime, setDateTime] = useState(new Date());
 
