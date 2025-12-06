@@ -36,7 +36,7 @@ const TechStack = () => {
   const getSVGIcon = (iconName) => {
     const icons = {
       typescript: (
-        <Image src="/TypeScript.svg" width={60} height={60} alt="ts" />
+        <Image src="/typescript.svg" width={60} height={60} alt="ts" />
       ),
 
       javascript: (
@@ -48,12 +48,12 @@ const TechStack = () => {
       angular: (
         <Image src="/Angular.svg" width={60} height={60} alt="Angular" />
       ),
-      nextjs: <Image src="/Nextjs.svg" width={60} height={60} alt="Next" />,
+      nextjs: <Image src="/nextjs.svg" width={60} height={60} alt="Next" />,
       express: (
         <Image src="/expressjs.svg" width={60} height={60} alt="expressjs" />
       ),
       mongodb: (
-        <Image src="/MongoDB.svg" width={60} height={60} alt="MongoDB" />
+        <Image src="/mongodb.svg" width={60} height={60} alt="MongoDB" />
       ),
       postgresql: (
         <Image
@@ -64,8 +64,8 @@ const TechStack = () => {
         />
       ),
       git: <Image src="/Git.svg" width={60} height={60} alt="Git" />,
-      docker: <Image src="/docker.svg" width={60} height={60} alt="docker" />,
-      figma: <Image src="/figma.svg" width={60} height={60} alt="figma" />,
+      docker: <Image src="/Docker.svg" width={60} height={60} alt="docker" />,
+      figma: <Image src="/Figma.svg" width={60} height={60} alt="figma" />,
       tailwind: (
         <Image
           src="/TailwindCSS.svg"
@@ -78,16 +78,16 @@ const TechStack = () => {
         <Image src="/aceternity.png" width={60} height={60} alt="aceternity" />
       ),
       bootstrap: (
-        <Image src="/bootstrap.svg" width={60} height={60} alt="bootstrap" />
+        <Image src="/Bootstrap.svg" width={60} height={60} alt="bootstrap" />
       ),
-      mysql: <Image src="/mysql.svg" width={60} height={60} alt="mysql" />,
-      npm: <Image src="/npm.svg" width={60} height={60} alt="npm" />,
+      mysql: <Image src="/MySQL.svg" width={60} height={60} alt="mysql" />,
+      npm: <Image src="/NPM.svg" width={60} height={60} alt="npm" />,
       postman: (
-        <Image src="/postman.svg" width={60} height={60} alt="postman" />
+        <Image src="/Postman.svg" width={60} height={60} alt="postman" />
       ),
       render: <Image src="/render.svg" width={60} height={60} alt="render" />,
       shadcn: <Image src="/shadcn.svg" width={60} height={60} alt="shadcn" />,
-      vercel: <Image src="/vercel.svg" width={60} height={60} alt="vercel" />,
+      vercel: <Image src="/Vercel.svg" width={60} height={60} alt="vercel" />,
       motion: <Image src="/motion.svg" width={60} height={60} alt="motion" />,
       tanstack: (
         <Image src="/tanstack.svg" width={60} height={60} alt="tanstack" />
