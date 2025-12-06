@@ -2,16 +2,19 @@
 import { useEffect, useState } from "react";
 
 const Details = () => {
-  const [dateTime, setDateTime] = useState(new Date());
+  const [dateTime, setDateTime] = useState(null);
 
-  // date and time
   useEffect(() => {
+    // run only on client
+    setDateTime(new Date());
+
     const interval = setInterval(() => {
       setDateTime(new Date());
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="flex flex-col px-6 py-4 gap-2 border-b">
       {/* designation */}
@@ -116,7 +119,7 @@ const Details = () => {
             <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
             <path d="M12 7v5l3 3" />
           </svg>
-          <p>{dateTime.toLocaleString()}</p>
+          <p>{dateTime ? dateTime.toLocaleString() : ""}</p>
         </div>
       </div>
 
