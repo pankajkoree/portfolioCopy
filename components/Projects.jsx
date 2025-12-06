@@ -11,9 +11,9 @@ const Projects = () => {
       {/* first two projects */}
       <div className="grid grid-cols-2 gap-6">
         {/* products api project */}
-        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
-          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
+          <div className="mb-4 rounded-tl-sm rounded-tr-sm overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
               src="/productsAPI-high.jpg"
               width={400}
@@ -83,9 +83,9 @@ const Projects = () => {
         </div>
 
         {/* the shoe company */}
-        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
-          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
+          <div className="mb-4 rounded-tl-sm rounded-tr-sm overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
               src="/theshoecompany.png"
               width={400}
@@ -157,9 +157,9 @@ const Projects = () => {
       {/* second two projects */}
       <div className="grid grid-cols-2 gap-6">
         {/* the hamburger */}
-        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
-          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
+          <div className="mb-4 rounded-tl-sm rounded-tr-sm overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
               src="/thehamburger.png"
               width={400}
@@ -228,9 +228,9 @@ const Projects = () => {
         </div>
 
         {/* currency convertor */}
-        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
+        <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
-          <div className="mb-4 rounded-tl-lg rounded-tr-lg overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
+          <div className="mb-4 rounded-tl-sm rounded-tr-sm overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-purple-600 shadow-sm shadow-blue-400 h-48 flex items-center">
             <Image
               src="/currencyconvertor.png"
               width={400}
