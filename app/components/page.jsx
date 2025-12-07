@@ -23,14 +23,14 @@ const ComponentsDemo = () => {
     ...props
   }) => {
     const baseClasses =
-      "font-medium rounded transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-offset-1";
+      "font-medium rounded-sm transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-offset-1";
     const variants = {
       primary:
         "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500 hover:cursor-pointer",
       secondary:
         "bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500 hover:cursor-pointer",
       outline:
-        "border border-gray-300 hover:bg-gray-50 text-gray-700 focus:ring-blue-500 hover:cursor-pointer",
+        "border border-gray-300 hover:bg-gray-50 dark:bg-gray-700 dark:text-white hover:text-black text-gray-700 focus:ring-blue-500 hover:cursor-pointer",
     };
     const sizes = {
       xs: "px-2 py-1 text-xs",
@@ -49,7 +49,10 @@ const ComponentsDemo = () => {
   };
 
   const Card = ({ children, className = "", ...props }) => (
-    <div className={`bg-white rounded-lg border p-4 ${className}`} {...props}>
+    <div
+      className={`bg-white dark:bg-[#0b0d16] dark:text-white rounded-sm border p-4 ${className}`}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -67,7 +70,7 @@ const ComponentsDemo = () => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={`w-full px-3 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent ${className}`}
+      className={`w-full px-3 py-1.5 border border-gray-300 rounded-sm text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent ${className}`}
       {...props}
     />
   );
@@ -77,7 +80,7 @@ const ComponentsDemo = () => {
 
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-        <div className="bg-white rounded-lg max-w-sm w-full mx-4">
+        <div className="bg-white rounded-sm max-w-sm w-full mx-4">
           <div className="p-4 border-b">
             <h3 className="font-medium text-sm">{title}</h3>
           </div>
@@ -102,7 +105,7 @@ const ComponentsDemo = () => {
 
     return (
       <div
-        className={`p-2 rounded border text-xs ${variants[variant]} ${className}`}
+        className={`p-2 rounded-sm border text-xs ${variants[variant]} ${className}`}
       >
         {children}
       </div>
@@ -121,7 +124,7 @@ const ComponentsDemo = () => {
 
     return (
       <span
-        className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${variants[variant]} ${className}`}
+        className={`inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-medium ${variants[variant]} ${className}`}
       >
         {children}
       </span>
@@ -172,7 +175,7 @@ const ComponentsDemo = () => {
       >
         {children}
         {show && (
-          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded shadow-sm">
+          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded-sm shadow-sm">
             {content}
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-2 h-2 bg-gray-900 rotate-45"></div>
           </div>
@@ -189,10 +192,10 @@ const ComponentsDemo = () => {
     };
 
     return src ? (
-      <img className={`${sizes[size]} rounded-full`} src={src} alt="Avatar" />
+      <img className={`${sizes[size]} rounded-sm`} src={src} alt="Avatar" />
     ) : (
       <div
-        className={`${sizes[size]} rounded-full bg-blue-600 flex items-center justify-center text-white font-medium`}
+        className={`${sizes[size]} rounded-sm bg-blue-600 flex items-center justify-center text-white font-medium`}
       >
         {initials}
       </div>
@@ -205,15 +208,24 @@ const ComponentsDemo = () => {
         {label}
       </Button>
       {isDropdownOpen && (
-        <div className="absolute z-10 mt-1 w-32 bg-white rounded border shadow-sm">
+        <div className="absolute z-10 mt-1 w-32 bg-white rounded-sm border shadow-sm">
           <div className="py-1">
-            <a href="#" className="block px-3 py-1 text-xs hover:bg-gray-50">
+            <a
+              href="#"
+              className="block px-3 py-1 text-xs hover:bg-gray-50 dark:bg-gray-700 dark:text-white"
+            >
               Option 1
             </a>
-            <a href="#" className="block px-3 py-1 text-xs hover:bg-gray-50">
+            <a
+              href="#"
+              className="block px-3 py-1 text-xs hover:bg-gray-50 dark:bg-gray-700 dark:text-white"
+            >
               Option 2
             </a>
-            <a href="#" className="block px-3 py-1 text-xs hover:bg-gray-50">
+            <a
+              href="#"
+              className="block px-3 py-1 text-xs hover:bg-gray-50 dark:bg-gray-700 dark:text-white"
+            >
               Option 3
             </a>
           </div>
@@ -238,7 +250,7 @@ const ComponentsDemo = () => {
                 className={`px-3 py-1.5 text-xs font-medium border-b-2 ${
                   activeTab === tab.props.value
                     ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700"
+                    : "border-transparent text-gray-500 hover:text-gray-700 dark:text-white hover:dark:text-gray-300"
                 }`}
               >
                 {tab.props.label}
@@ -264,9 +276,9 @@ const ComponentsDemo = () => {
     };
 
     return (
-      <div className="w-full bg-gray-200 rounded-full h-1.5">
+      <div className="w-full bg-gray-200 rounded-sm h-1.5">
         <div
-          className={`h-1.5 rounded-full ${variants[variant]}`}
+          className={`h-1.5 rounded-sm ${variants[variant]}`}
           style={{ width: `${value}%` }}
         ></div>
       </div>
@@ -282,7 +294,7 @@ const ComponentsDemo = () => {
 
     return (
       <div
-        className={`fixed top-2 right-2 p-2 rounded border text-xs ${variants[variant]} shadow z-50`}
+        className={`fixed top-2 right-2 p-2 rounded-sm border text-xs ${variants[variant]} shadow z-50`}
       >
         <div className="flex items-center">
           <span>{message}</span>
@@ -311,11 +323,17 @@ const ComponentsDemo = () => {
   );
 
   const ListGroup = ({ children }) => (
-    <div className="border rounded divide-y text-sm">{children}</div>
+    <div className="border rounded-sm divide-y text-sm">{children}</div>
   );
 
   const ListGroupItem = ({ children, active }) => (
-    <div className={`px-3 py-2 ${active ? "bg-blue-50 text-blue-700" : ""}`}>
+    <div
+      className={`px-3 py-2 ${
+        active
+          ? "bg-blue-50 dark:bg-[#0b0d16] text-blue-700 rounded-tl-sm rounded-tr-sm"
+          : ""
+      }`}
+    >
       {children}
     </div>
   );
@@ -364,8 +382,10 @@ const ComponentsDemo = () => {
         <div className="w-full p-4 border-b">
           {/* Header */}
           <div className="text-center mb-6">
-            <h1 className="text-xl font-bold text-gray-900">PKUI Components</h1>
-            <p className="text-sm text-gray-600 mt-1">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+              PKUI Components
+            </h1>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               30+ reusable React components
             </p>
             <div className="flex justify-center gap-2 mt-3">
@@ -382,10 +402,10 @@ const ComponentsDemo = () => {
                   <Card key={index}>
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-medium text-sm text-gray-900">
+                        <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -417,7 +437,7 @@ const ComponentsDemo = () => {
                       {comp.name === "Card" && (
                         <Card className="p-3 border">
                           <h4 className="font-medium text-sm">Card Title</h4>
-                          <p className="text-xs text-gray-600 mt-1">
+                          <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                             Card content example
                           </p>
                           <Button size="xs" className="mt-2">
@@ -437,10 +457,10 @@ const ComponentsDemo = () => {
                   <Card key={index}>
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-medium text-sm text-gray-900">
+                        <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -495,10 +515,10 @@ const ComponentsDemo = () => {
                   <Card key={index}>
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-medium text-sm text-gray-900">
+                        <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -508,7 +528,7 @@ const ComponentsDemo = () => {
                         <div className="overflow-x-auto">
                           <table className="min-w-full divide-y divide-gray-200 text-xs">
                             <thead>
-                              <tr className="bg-gray-50">
+                              <tr className="bg-gray-50 dark:bg-[#0b0d16] dark:text-white">
                                 <th className="px-3 py-2 text-left">Name</th>
                                 <th className="px-3 py-2 text-left">Status</th>
                               </tr>
@@ -558,10 +578,10 @@ const ComponentsDemo = () => {
                   <Card key={index}>
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-medium text-sm text-gray-900">
+                        <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -614,7 +634,7 @@ const ComponentsDemo = () => {
 
           {/* Quick Examples */}
           <Card className="mt-6">
-            <h3 className="font-medium text-sm text-gray-900 mb-3">
+            <h3 className="font-medium text-sm text-gray-900 dark:text-white mb-3">
               Quick Examples
             </h3>
             <div className="space-y-3">
@@ -649,11 +669,11 @@ const ComponentsDemo = () => {
           </Card>
 
           {/* Installation */}
-          <Card className="mt-6 bg-gray-50">
-            <h3 className="font-medium text-sm text-gray-900 mb-2">
+          <Card className="mt-6 bg-gray-50 dark:bg-[#0b0d16] dark:text-white">
+            <h3 className="font-medium text-sm text-gray-900 dark:text-white mb-2">
               Installation
             </h3>
-            <div className="bg-gray-900 rounded p-3 mb-3">
+            <div className="bg-gray-900 rounded-sm p-3 mb-3">
               <div className="flex items-center justify-between">
                 <code className="text-green-400 text-xs">
                   npm install @pankaj.koree/pkui
@@ -672,17 +692,17 @@ const ComponentsDemo = () => {
                 </Button>
               </div>
             </div>
-            <div className="text-xs text-gray-600 space-y-1">
+            <div className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
               <p className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>{" "}
+                <span className="w-2 h-2 bg-green-500 rounded-sm mr-2"></span>{" "}
                 30+ Components
               </p>
               <p className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>{" "}
+                <span className="w-2 h-2 bg-blue-500 rounded-sm mr-2"></span>{" "}
                 TypeScript Support
               </p>
               <p className="flex items-center">
-                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>{" "}
+                <span className="w-2 h-2 bg-purple-500 rounded-sm mr-2"></span>{" "}
                 Zero Dependencies
               </p>
             </div>
@@ -690,10 +710,10 @@ const ComponentsDemo = () => {
 
           {/* Usage */}
           <Card className="mt-6">
-            <h3 className="font-medium text-sm text-gray-900 mb-2">
+            <h3 className="font-medium text-sm text-gray-900 dark:text-white mb-2">
               Quick Usage
             </h3>
-            <pre className="bg-gray-900 text-gray-200 p-3 rounded text-xs overflow-x-auto">
+            <pre className="bg-gray-900 text-gray-200 p-3 rounded-sm text-xs overflow-x-auto">
               {`import { Button, Card } from '@pankaj.koree/pkui';
 
 function App() {
