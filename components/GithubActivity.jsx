@@ -41,7 +41,7 @@ export default function GitHubHeatmap() {
       <div>
         <p className="text-2xl">Github Activity</p>
       </div>
-      <div className="relative flex flex-col p-2 bg-white dark:bg-zinc-900 px-6 rounded-sm border dark:border-zinc-800 w-fit inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
+      <div className="relative flex flex-col p-2 bg-gradient-to-r from-[#c5d6d6] via-[#9fa3a3] to-[#bdc7c7] dark:bg-gradient-to-r dark:from-[#2a2b2b] dark:via-[#2a2c2c] dark:to-[#0f0e0e] px-6 rounded-sm border dark:border-zinc-800 w-fit inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
         {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h2 className="font-semibold text-sm text-zinc-800 dark:text-zinc-200">
@@ -51,7 +51,7 @@ export default function GitHubHeatmap() {
           <select
             value={year}
             onChange={(e) => setYear(Number(e.target.value))}
-            className="border dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm px-2 py-1 rounded-sm"
+            className="border dark:border-zinc-700 text-sm px-2 py-1 rounded-sm"
           >
             {[2020, 2021, 2022, 2023, 2024, 2025].map((y) => (
               <option key={y} value={y}>
@@ -62,7 +62,7 @@ export default function GitHubHeatmap() {
         </div>
 
         {/* Month Labels */}
-        <div className="grid grid-flow-col auto-cols-max ml-8 mb-1 text-[10px] text-zinc-500 dark:text-zinc-400">
+        <div className="grid grid-flow-col auto-cols-max ml-8 mb-1 text-[10px] text-gray-800 dark:text-zinc-200">
           {[
             "Jan",
             "Feb",
@@ -85,7 +85,7 @@ export default function GitHubHeatmap() {
 
         <div className="flex gap-1">
           {/* Day Labels */}
-          <div className="flex flex-col justify-between text-[10px] text-zinc-500 dark:text-zinc-400 ">
+          <div className="flex flex-col justify-between text-[10px] text-gray-800 dark:text-zinc-200">
             {["Mon", "Wed", "Fri"].map((d) => (
               <span key={d}>{d}</span>
             ))}
@@ -136,7 +136,7 @@ export default function GitHubHeatmap() {
         )}
 
         {/* Legend */}
-        <div className="mt-4 flex items-center gap-2 text-[10px] text-zinc-500 dark:text-zinc-400">
+        <div className="mt-4 flex items-center gap-2 text-[10px] text-gray-800 dark:text-zinc-200">
           <span>Less</span>
           <div className="flex gap-1">
             {["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"].map(

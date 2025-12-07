@@ -101,7 +101,7 @@ const TechStack = () => {
       <div>
         <p className="text-2xl">Tech Stacks</p>
       </div>
-      <div className="bg-white dark:bg-zinc-900 rounded-sm p-8 dark:border-zinc-800 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
+      <div className="bg-gradient-to-r from-[#c5d6d6] via-[#9fa3a3] to-[#bdc7c7] dark:bg-gradient-to-r dark:from-[#2a2b2b] dark:via-[#2a2c2c] dark:to-[#0f0e0e] rounded-sm p-8 dark:border-zinc-800 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5">
           {techStack.map((tech, idx) => (
             <div

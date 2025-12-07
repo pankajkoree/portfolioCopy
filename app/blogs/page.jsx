@@ -45,7 +45,7 @@ const BlogPage = () => {
       category: "Backend",
       image: "/nodejs.png",
       url: "https://medium.com/@pankajkoree/building-scalable-microservices-with-node-js-a-complete-guide-277b0c46d731",
-      featured: true,
+      featured: false,
     },
     {
       id: 4,
@@ -81,7 +81,7 @@ const BlogPage = () => {
       category: "DevOps",
       image: "/devops.png",
       url: "#",
-      featured: false,
+      featured: true,
     },
   ];
 
@@ -94,7 +94,7 @@ const BlogPage = () => {
         <NavBar />
         <div className="w-full border-b">
           {/* Header */}
-          <div className="bg-white/80 dark:bg-[#0b0d16] backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 px-6 py-4">
+          <div className="backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <Link href="/">

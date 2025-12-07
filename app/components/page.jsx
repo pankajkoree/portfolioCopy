@@ -50,7 +50,7 @@ const ComponentsDemo = () => {
 
   const Card = ({ children, className = "", ...props }) => (
     <div
-      className={`bg-white dark:bg-[#0b0d16] dark:text-white rounded-sm border p-4 ${className}`}
+      className={`bg-gradient-to-r from-[#c5d6d6] via-[#9fa3a3] to-[#bdc7c7] dark:bg-gradient-to-r dark:from-[#2a2b2b] dark:via-[#2a2c2c] dark:to-[#0f0e0e] dark:text-white rounded-sm border p-4 ${className}`}
       {...props}
     >
       {children}
@@ -405,7 +405,7 @@ const ComponentsDemo = () => {
                         <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
+                        <p className="text-xs text-gray-700 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -460,7 +460,7 @@ const ComponentsDemo = () => {
                         <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
+                        <p className="text-xs text-gray-700 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -518,7 +518,7 @@ const ComponentsDemo = () => {
                         <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
+                        <p className="text-xs text-gray-700 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -581,7 +581,7 @@ const ComponentsDemo = () => {
                         <h3 className="font-medium text-sm text-gray-900 dark:text-white">
                           {comp.name}
                         </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-300 mt-0.5">
+                        <p className="text-xs text-gray-700 dark:text-gray-300 mt-0.5">
                           {comp.description}
                         </p>
                       </div>
@@ -692,7 +692,7 @@ const ComponentsDemo = () => {
                 </Button>
               </div>
             </div>
-            <div className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+            <div className="text-xs text-gray-700 dark:text-gray-300 space-y-1">
               <p className="flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-sm mr-2"></span>{" "}
                 30+ Components
