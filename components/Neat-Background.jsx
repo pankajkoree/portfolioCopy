@@ -7,9 +7,8 @@ export default function NeatBackground() {
   const canvasRef = useRef(null);
   const neatRef = useRef(null);
   const [theme, setTheme] = useState("light");
-  const themeRef = useRef("light"); // Add a ref to track current theme
+  const themeRef = useRef("light");
 
-  // Light theme config
   const lightConfig = {
     colors: [
       { color: "#D6C9C9", enabled: true },
@@ -40,7 +39,6 @@ export default function NeatBackground() {
     yOffset: 0,
   };
 
-  // Dark theme config
   const darkConfig = {
     colors: [
       { color: "#121111", enabled: true },
@@ -72,48 +70,40 @@ export default function NeatBackground() {
   };
 
   useEffect(() => {
-    // Update theme ref whenever theme changes
     themeRef.current = theme;
   }, [theme]);
 
   useEffect(() => {
-    // Function to check current theme
     const checkTheme = () => {
       return document.documentElement.classList.contains("dark")
         ? "dark"
         : "light";
     };
 
-    // Set initial theme
     const initialTheme = checkTheme();
     setTheme(initialTheme);
     themeRef.current = initialTheme;
 
-    // Create a MutationObserver to watch for theme changes
     const observer = new MutationObserver(() => {
       const newTheme = checkTheme();
-      // Compare with the ref value, not the stale closure value
       if (newTheme !== themeRef.current) {
         setTheme(newTheme);
         themeRef.current = newTheme;
       }
     });
 
-    // Observe the html element for class changes
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
     });
 
     return () => observer.disconnect();
-  }, []); // Empty dependency array - runs once on mount
+  }, []);
 
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    // Clean up previous instance
     if (neatRef.current) {
-      // Try to destroy previous instance if the library supports it
       if (neatRef.current.destroy) {
         neatRef.current.destroy();
       }
@@ -129,7 +119,6 @@ export default function NeatBackground() {
     neat.speed = 6;
     neatRef.current = neat;
 
-    // Cleanup on unmount
     return () => {
       if (neatRef.current) {
         if (neatRef.current.destroy) {
@@ -138,7 +127,7 @@ export default function NeatBackground() {
         neatRef.current = null;
       }
     };
-  }, [theme]); // Re-run when theme changes
+  }, [theme]);
 
   return (
     <canvas
