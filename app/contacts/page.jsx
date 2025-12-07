@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 // components imported
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -27,7 +27,7 @@ const page = () => {
       }),
     });
     const result = await response.json();
-    if (result.success) {
+    if (result.success === true) {
       e.target.reset();
       toast.success("Message sent successfully.");
     } else {
@@ -41,20 +41,18 @@ const page = () => {
         <NavBar />
 
         {/* Navbar heading */}
-        <h1 className="text-4xl font-bold text-center mt-20">Contact</h1>
+        <h1 className="text-5xl font-bold text-center mt-20">Contact</h1>
         {/* end Navbar heading */}
 
         <div className="relative flex flex-col justify-center">
-          <p className="text-center p-2">
+          <p className="text-center px-6 py-4 text-3xl border-b">
             Feel free to reach out if you have any questions or would like to
             collaborate!
           </p>
 
-          <div className="border border-gray-600 dark:border-gray-300 flex mt-8"></div>
-
-          <div className="mt-8 flex flex-col px-6 py-4">
-            <h2> Get in touch</h2>
-            <p>
+          <div className="mt-8 flex flex-col px-6 py-4 border-b">
+            <h2 className="text-2xl"> Get in touch</h2>
+            <p className="text-xl">
               Fill out the form below, and I&apos;ll respond as quickly as I
               can.
             </p>
@@ -63,7 +61,7 @@ const page = () => {
           {/* form */}
           <form
             onSubmit={handleSubmit}
-            className="relative flex flex-col px-6 py-4 gap-6"
+            className="relative flex flex-col px-6 py-4 gap-[21px] text-xl"
           >
             <div className="flex flex-col">
               <Label htmlFor="name">Name:</Label>
