@@ -10,7 +10,7 @@ const Blogs = () => {
         <p className="text-2xl">Blogs</p>
       </div>
       {/* first two projects */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* products api blog */}
         <Link
           href="https://medium.com/@pankajkoree/products-api-how-i-built-it-what-it-does-and-why-it-matters-2efaf5f1ed0e"
