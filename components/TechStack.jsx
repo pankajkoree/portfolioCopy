@@ -36,61 +36,222 @@ const TechStack = () => {
   const getSVGIcon = (iconName) => {
     const icons = {
       typescript: (
-        <Image src="/typescript.svg" width={60} height={60} alt="ts" />
+        <Image
+          src="/typescript.svg"
+          alt="ts"
+          className="w-12 h-12 md:w-16 md:h-16"
+          width={0}
+          height={0}
+          sizes="100vw"
+        />
       ),
 
       javascript: (
-        <Image src="/JavaScript.svg" width={60} height={60} alt="JavaScript" />
+        <Image
+          src="/JavaScript.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="JavaScript"
+        />
       ),
-      python: <Image src="/Python.svg" width={60} height={60} alt="Python" />,
-      nodejs: <Image src="/Node.js.svg" width={60} height={60} alt="Node" />,
-      react: <Image src="/React.svg" width={60} height={60} alt="React" />,
+      python: (
+        <Image
+          src="/Python.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="Python"
+        />
+      ),
+      nodejs: (
+        <Image
+          src="/Node.js.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="Node"
+        />
+      ),
+      react: (
+        <Image
+          src="/React.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="React"
+        />
+      ),
       angular: (
-        <Image src="/Angular.svg" width={60} height={60} alt="Angular" />
+        <Image
+          src="/Angular.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="Angular"
+        />
       ),
-      nextjs: <Image src="/nextjs.svg" width={60} height={60} alt="Next" />,
+      nextjs: (
+        <Image
+          src="/nextjs.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="Next"
+        />
+      ),
       express: (
-        <Image src="/expressjs.svg" width={60} height={60} alt="expressjs" />
+        <Image
+          src="/expressjs.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="expressjs"
+        />
       ),
       mongodb: (
-        <Image src="/mongodb.svg" width={60} height={60} alt="MongoDB" />
+        <Image
+          src="/mongodb.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="MongoDB"
+        />
       ),
       postgresql: (
         <Image
           src="/PostgresSQL.svg"
-          width={60}
-          height={60}
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
           alt="PostgresSQL"
         />
       ),
-      git: <Image src="/Git.svg" width={60} height={60} alt="Git" />,
-      docker: <Image src="/Docker.svg" width={60} height={60} alt="docker" />,
-      figma: <Image src="/Figma.svg" width={60} height={60} alt="figma" />,
+      git: (
+        <Image
+          src="/Git.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="Git"
+        />
+      ),
+      docker: (
+        <Image
+          src="/Docker.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="docker"
+        />
+      ),
+      figma: (
+        <Image
+          src="/Figma.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="figma"
+        />
+      ),
       tailwind: (
         <Image
           src="/TailwindCSS.svg"
-          width={60}
-          height={60}
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
           alt="TailwindCSS"
         />
       ),
       aceternity: (
-        <Image src="/aceternity.png" width={60} height={60} alt="aceternity" />
+        <Image
+          src="/aceternity.png"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="aceternity"
+        />
       ),
       bootstrap: (
-        <Image src="/Bootstrap.svg" width={60} height={60} alt="bootstrap" />
+        <Image
+          src="/Bootstrap.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="bootstrap"
+        />
       ),
-      mysql: <Image src="/MySQL.svg" width={60} height={60} alt="mysql" />,
-      npm: <Image src="/NPM.svg" width={60} height={60} alt="npm" />,
+      mysql: (
+        <Image
+          src="/MySQL.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="mysql"
+        />
+      ),
+      npm: (
+        <Image
+          src="/NPM.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="npm"
+        />
+      ),
       postman: (
-        <Image src="/Postman.svg" width={60} height={60} alt="postman" />
+        <Image
+          src="/Postman.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="postman"
+        />
       ),
-      render: <Image src="/render.svg" width={60} height={60} alt="render" />,
-      shadcn: <Image src="/shadcn.svg" width={60} height={60} alt="shadcn" />,
-      vercel: <Image src="/Vercel.svg" width={60} height={60} alt="vercel" />,
-      motion: <Image src="/motion.svg" width={60} height={60} alt="motion" />,
+      render: (
+        <Image
+          src="/render.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="render"
+        />
+      ),
+      shadcn: (
+        <Image
+          src="/shadcn.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="shadcn"
+        />
+      ),
+      vercel: (
+        <Image
+          src="/Vercel.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="vercel"
+        />
+      ),
+      motion: (
+        <Image
+          src="/motion.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="motion"
+        />
+      ),
       tanstack: (
-        <Image src="/tanstack.svg" width={60} height={60} alt="tanstack" />
+        <Image
+          src="/tanstack.svg"
+          width={0}
+          height={0}
+          className="w-12 h-12 md:w-16 md:h-16"
+          alt="tanstack"
+        />
       ),
     };
     return icons[iconName] || icons.typescript;
@@ -101,8 +262,8 @@ const TechStack = () => {
       <div>
         <p className="text-2xl">Tech Stacks</p>
       </div>
-      <div className="bg-gradient-to-r from-[#c5d6d6] via-[#9fa3a3] to-[#bdc7c7] dark:bg-gradient-to-r dark:from-[#2a2b2b] dark:via-[#2a2c2c] dark:to-[#0f0e0e] rounded-sm p-8 dark:border-zinc-800 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5">
+      <div className="bg-gradient-to-r from-[#c5d6d6] via-[#9fa3a3] to-[#bdc7c7] dark:bg-gradient-to-r dark:from-[#2a2b2b] dark:via-[#2a2c2c] dark:to-[#0f0e0e] rounded-sm p-3 md:px-5 md:py-3 lg:p-8 dark:border-zinc-800 inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-gray-200">
+        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-5 ml-4 md:ml-8 lg:ml-0">
           {techStack.map((tech, idx) => (
             <div
               key={idx}
@@ -110,7 +271,7 @@ const TechStack = () => {
               onMouseEnter={() => setHoveredTech(idx)}
               onMouseLeave={() => setHoveredTech(null)}
             >
-              <div className="w-16 h-16 overflow-hidden shadow-sm hover:shadow-md shadow-blue-400 hover:shadow-green-400 transition-all duration-200 transform hover:scale-110 cursor-pointer flex items-center justify-center dark:bg-gray-300 rounded-sm">
+              <div className="w-12 h-12 md:w-16 md:h-16 overflow-hidden shadow-sm hover:shadow-md shadow-blue-400 hover:shadow-green-400 transition-all duration-200 transform hover:scale-110 cursor-pointer flex items-center justify-center dark:bg-gray-300 rounded-sm">
                 {getSVGIcon(tech.icon)}
               </div>
               {hoveredTech === idx && (
