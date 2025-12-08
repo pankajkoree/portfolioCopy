@@ -1,11 +1,28 @@
+"use client";
+
 import Link from "next/link";
 
 const NavigationBar = () => {
   return (
-    <div className="flex gap-4 text-xl">
-      <Link href="/components">Components</Link>
-      <Link href="/blogs">Blogs</Link>
-      <Link href="/projects">Projects</Link>
+    <div className="flex gap-6 text-lg">
+      <Link
+        href="/components"
+        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      >
+        Components
+      </Link>
+      <Link
+        href="/blogs"
+        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      >
+        Blogs
+      </Link>
+      <Link
+        href="/projects"
+        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      >
+        Projects
+      </Link>
     </div>
   );
 };
