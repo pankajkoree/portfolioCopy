@@ -41,18 +41,18 @@ const page = () => {
         <NavBar />
 
         {/* Navbar heading */}
-        <h1 className="text-5xl font-bold text-center mt-20">Contact</h1>
+        <h1 className="text-3xl md:text-5xl font-bold text-center mt-4 md:mt-20">Contact</h1>
         {/* end Navbar heading */}
 
         <div className="relative flex flex-col justify-center">
-          <p className="text-center px-6 py-4 text-3xl border-b">
+          <p className="text-center px-6 py-2 md:py-4 text-xl md:text-3xl border-b">
             Feel free to reach out if you have any questions or would like to
             collaborate!
           </p>
 
-          <div className="mt-8 flex flex-col px-6 py-4 border-b">
-            <h2 className="text-2xl"> Get in touch</h2>
-            <p className="text-xl">
+          <div className="mt-2 md:mt-8 flex flex-col px-6 py-2 md:py-4 border-b">
+            <h2 className="text-xl md:text-2xl">Get in touch</h2>
+            <p className="text-md md:text-xl">
               Fill out the form below, and I&apos;ll respond as quickly as I
               can.
             </p>
@@ -61,7 +61,7 @@ const page = () => {
           {/* form */}
           <form
             onSubmit={handleSubmit}
-            className="relative flex flex-col px-6 py-4 gap-[21px] text-xl"
+            className="relative flex flex-col px-6 py-2 md:py-4 gap-[21px] text-md md:text-xl"
           >
             <div className="flex flex-col">
               <Label htmlFor="name">Name:</Label>
