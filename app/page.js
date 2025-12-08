@@ -69,8 +69,10 @@ export default function Home() {
         <NavBar />
 
         {/* logo full */}
-        <div className="relative flex justify-center px-6 py-4 top-4 border-b">
-          <div className={`${pacifico.className} text-8xl`}>
+        <div className="relative flex justify-center px-6 py-2 md:py-3 lg:py-4 top-4 border-b">
+          <div
+            className={`${pacifico.className} text-3xl md:text-5xl lg:text-8xl`}
+          >
             <h1>PK</h1>
           </div>
         </div>
@@ -83,11 +85,18 @@ export default function Home() {
               width={120}
               height={120}
               alt="profile"
-              className="rounded-full"
+              className="rounded-full hidden md:block"
+            />
+            <Image
+              src="/profile.png"
+              width={80}
+              height={80}
+              alt="profile"
+              className="rounded-full block md:hidden"
             />
           </div>
-          <div className="flex flex-col gap-2 mt-8">
-            <h2 className="text-3xl font-extrabold">Pankaj Kori</h2>
+          <div className="flex flex-col md:gap-2 mt-4 md:mt-8">
+            <h2 className="text-xl md:text-3xl font-extrabold">Pankaj Kori</h2>
             <p className="text-md text-gray-500 dark:text-gray-500 h-[20px]">
               {text}
               <span className="animate-pulse"></span>

@@ -16,7 +16,7 @@ const Details = () => {
   }, []);
 
   return (
-    <div className="flex flex-col px-6 py-4 gap-2 border-b">
+    <div className="flex flex-col px-6 py-4 gap-1 md:gap-2 border-b">
       {/* designation */}
       <div className="flex gap-4">
         <svg
@@ -74,7 +74,7 @@ const Details = () => {
       </div>
 
       {/* address and time */}
-      <div className="grid grid-cols-2">
+      <div className="grid grid-colos-1 gap-2 md:gap-0 md:grid-cols-2">
         <div className="flex gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ const Details = () => {
       </div>
 
       {/* phone and email */}
-      <div className="grid grid-cols-2">
+      <div className="grid grid-colos-1 gap-2 md:gap-0 md:grid-cols-2">
         <div className="flex gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
