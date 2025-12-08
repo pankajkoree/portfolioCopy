@@ -9,7 +9,7 @@ const Projects = () => {
         <p className="text-2xl">Projects</p>
       </div>
       {/* first two projects */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* products api project */}
         <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
@@ -155,7 +155,7 @@ const Projects = () => {
       </div>
 
       {/* second two projects */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* the hamburger */}
         <div className="border inset-shadow-sm inset-shadow-blue-200 shadow-sm shadow-blue-400 hover:shadow-green-400 rounded-sm hover:bg-[#f7f4f4] dark:hover:bg-[#191c1f]">
           {/* Image */}
