@@ -52,11 +52,11 @@ const BlogPage = () => {
       title: "The Future of Web Development in 2026",
       description:
         "Exploring emerging trends and technologies that will shape web development in the coming year.",
-      readTime: "6 min read",
+      readTime: "3 min read",
       date: "Dec 08, 2025",
       category: "Trends",
       image: "/webdev-future.png",
-      url: "#",
+      url: "https://medium.com/@pankajkoree/the-future-of-web-development-in-2026-trends-that-will-redefine-the-web-d02c7d96a3d0",
       featured: true,
     },
     {
@@ -64,11 +64,11 @@ const BlogPage = () => {
       title: "Mastering Next.js 16: Server Components & Beyond",
       description:
         "Deep dive into Next.js 16 features including server components, caching strategies, and performance optimization.",
-      readTime: "10 min read",
+      readTime: "4 min read",
       date: "Dec 08, 2025",
       category: "Frontend",
       image: "/nextjs.png",
-      url: "#",
+      url: "https://medium.com/@pankajkoree/mastering-next-js-16-server-components-beyond-39337d8ce192",
       featured: false,
     },
     {
@@ -76,11 +76,11 @@ const BlogPage = () => {
       title: "DevOps Best Practices for Modern Teams",
       description:
         "Essential DevOps practices that every development team should implement for smoother deployments.",
-      readTime: "9 min read",
-      date: "Dec 08, 2025",
+      readTime: "3 min read",
+      date: "Dec 09, 2025",
       category: "DevOps",
       image: "/devops.png",
-      url: "#",
+      url: "https://medium.com/@pankajkoree/devops-best-practices-for-modern-teams-371cef553a3c",
       featured: true,
     },
   ];
