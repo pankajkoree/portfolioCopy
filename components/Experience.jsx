@@ -253,11 +253,11 @@ const Experience = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-4">
+      {/* <div className="flex justify-center mb-4">
         <Link href="/experiences">
           <Button variant="more">View more</Button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
