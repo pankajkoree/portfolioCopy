@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import Link from "next/link";
 import {
@@ -24,10 +25,12 @@ const AwardsPage = () => {
         "Received top honors among 150+ submissions for innovative approach to help the social problems",
       logo: "🏆",
       pdfAvailable: false,
+      pdfUrl: [],
       imageAvailable: true,
-      imageUrl:
+      imageName: ["Best Paper Award"],
+      imageUrl: [
         "https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view",
-      pdfUrl: "",
+      ],
     },
     {
       id: 2,
@@ -39,10 +42,17 @@ const AwardsPage = () => {
         "Led a team of 4 to create prototype that can attract mental illness users to be able to use resources and get help from it",
       logo: "💡",
       pdfAvailable: true,
+      pdfName: ["Research Paper on DMHIW"],
+      pdfUrl: ["https://ijnrd.org/papers/IJNRD2504330.pdf"],
       imageAvailable: true,
-      imageUrl:
+      imageName: [
+        "Certificate of Project Presentation",
+        "Certificate of Research Paper on DMHIW",
+      ],
+      imageUrl: [
         "https://drive.google.com/file/d/1HhwRV5D7yyQkSlHOH0i8MLZlHMBtQ-Pa/view",
-      pdfUrl: "https://ijnrd.org/papers/IJNRD2504330.pdf",
+        "https://drive.google.com/file/d/1zv1D2VFzooq20bCNfbRb-_SaT_kkO1dl/view",
+      ],
     },
     {
       id: 3,
@@ -54,38 +64,100 @@ const AwardsPage = () => {
         "Participated as a participants as well as volunteered for managing the guests",
       logo: "🚀",
       pdfAvailable: false,
+      pdfName: [],
+      pdfUrl: [],
       imageAvailable: true,
-      imageUrl:
+      imageName: ["IEE Summit"],
+      imageUrl: [
         "https://drive.google.com/file/d/1aIfmrcdkMM4ZXiwUiQqhOTgSn0_UtqI_/view",
-      pdfUrl: "",
+      ],
     },
     {
       id: 4,
-      title: "Excellence in Research",
-      category: "paper presentation",
-      description:
-        "Published paper on machine learning algorithms in Journal of AI Research",
-      achievement: "Paper cited by 50+ researchers in the field",
-      logo: "📚",
+      title:
+        "The Development of the Junior Shopping Site Based on the Ecommerce Technologies Online Web Application for the Retailer",
+      category: "project",
+      description: "Developed an e-commerce platform for the retailers",
+      achievement:
+        "Led a team of 4 to create prototype that can be used by the retailers in the rural areas to provide ecommerce services to the local people",
+      logo: "💡",
       pdfAvailable: true,
-      imageAvailable: false,
-      imageUrl:
-        "https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view?usp=drive_link",
-      pdfUrl: "",
+      pdfName: ["Research Paper on Junior Shopping Site"],
+      pdfUrl: ["https://ijnrd.org/papers/IJNRD2410215.pdf"],
+      imageAvailable: true,
+      imageName: ["Certificate of Research Paper on Junior Shopping Site"],
+      imageUrl: [
+        "https://drive.google.com/file/d/16RZDk2nhgICRg32MGsoUFwWrtIIkjVhk/view",
+      ],
     },
     {
       id: 5,
-      title: "Community Impact Award",
-      category: "project",
-      description: "Developed community outreach program for STEM education",
-      achievement: "Program reached over 500 students across 10 schools",
-      logo: "🤝",
+      title: "KU HACKATHON - 2025",
+      category: "participation",
+      description:
+        "Attended two days hackathon with two members of Dark Nova Coders Team",
+      achievement: "Developed a security system based on Blockchain Technology",
+      logo: "🚀",
       pdfAvailable: false,
-      imageAvailable: false,
-      imageUrl:
-        "https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view?usp=drive_link",
-      pdfUrl: "",
+      pdfName: [],
+      pdfUrl: [],
+      imageAvailable: true,
+      imageName: ["KU Hackathon 2025"],
+      imageUrl: [
+        "https://drive.google.com/file/d/1nUyw3zmcjyyH0FfkqAi-9s9kgy-DrZcN/view",
+      ],
     },
+    {
+      id: 6,
+      title: "Technorollix - A National Level Techno-Cultural Fest 2023",
+      category: "project",
+      description:
+        "Attended three days Techno-Cultural Fest with the team of two to demonstrate the tech project",
+      achievement:
+        "Got the 3rd place in the non-working by building a self power generating system based on transformer model",
+      logo: "💡",
+      pdfAvailable: false,
+      pdfName: [],
+      pdfUrl: [],
+      imageAvailable: true,
+      imageName: [
+        "Certificate of Merit - 3rd place",
+        "Certificate of Participation",
+      ],
+      imageUrl: [
+        "https://drive.google.com/file/d/1ZDgCh6qAyGpH0lCPaYdptox8YoA3d5hD/view",
+        "https://drive.google.com/file/d/1mlV2gD92Q7zuJt6yylyKYmlZLSFdfpM2/view",
+      ],
+    },
+    // {
+    //   id: 7,
+    //   title: "Excellence in Research",
+    //   category: "paper presentation",
+    //   description:
+    //     "Published paper on machine learning algorithms in Journal of AI Research",
+    //   achievement: "Paper cited by 50+ researchers in the field",
+    //   logo: "📚",
+    //   pdfAvailable: false,
+    //   pdfUrl: [],
+    //   imageAvailable: false,
+    //   imageUrl: [
+    //     "https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view?usp=drive_link",
+    //   ],
+    // },
+    // {
+    //   id: 8,
+    //   title: "Community Impact Award",
+    //   category: "project",
+    //   description: "Developed community outreach program for STEM education",
+    //   achievement: "Program reached over 500 students across 10 schools",
+    //   logo: "🤝",
+    //   pdfAvailable: false,
+    //   imageAvailable: false,
+    //   imageUrl: [
+    //     "https://drive.google.com/file/d/1E6s9uuhrc-YSZ_aMsqvc-pu2LWyh8MJa/view?usp=drive_link",
+    //   ],
+    //   pdfUrl: [],
+    // },
   ];
 
   // Category icons mapping
@@ -179,65 +251,113 @@ const AwardsPage = () => {
               </div>
 
               {/* PDF and Image Availability Indicators */}
-              <div className="mt-6 flex items-center space-x-4">
-                {/* PDF Available Indicator */}
-                {award.pdfAvailable && (
-                  <div className="flex items-center space-x-2">
-                    <div className="relative group">
-                      <Link href={award.pdfUrl} target="_blank">
-                        <div className="p-2 bg-red-50 rounded-sm group-hover:bg-red-100 transition cursor-pointer">
-                          <FaFilePdf className="text-red-600 text-lg" />
-                        </div>
-                      </Link>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
-                        View PDF ({award.attachments?.length || 0} files)
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-2 h-2 bg-gray-800 rotate-45"></div>
+              <div className="mt-2 flex items-center space-x-4">
+                {/* PDF Available Indicators - Dynamic for multiple PDFs */}
+                {/* PDF and Image Availability Indicators */}
+                <div className="">
+                  {/* Availability Labels Row */}
+                  <div className="flex items-center space-x-4 mb-3">
+                    {/* PDF Availability Label */}
+                    {award.pdfAvailable && (
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <span className="font-medium text-gray-700 dark:text-gray-300">
+                          PDF Available
+                          {award.pdfUrl &&
+                            award.pdfUrl.length > 1 &&
+                            ` (${award.pdfUrl.length})`}
+                        </span>
                       </div>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-600 dark:text-gray-300">
-                        PDF Available
-                      </span>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
-                        Published Paper
-                      </p>
-                    </div>
-                  </div>
-                )}
+                    )}
 
-                {/* Image Available Indicator */}
-                {award.imageAvailable && (
-                  <div className="flex items-center space-x-2">
-                    <div className="relative group">
-                      <Link href={award.imageUrl} target="_blank">
-                        <div className="p-2 bg-blue-50 rounded-sm group-hover:bg-blue-100 transition cursor-pointer">
-                          <FaImage className="text-blue-600 text-lg" />
-                        </div>
-                      </Link>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
-                        View Images
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-2 h-2 bg-gray-800 rotate-45"></div>
+                    {/* Image Availability Label */}
+                    {award.imageAvailable && (
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span className="font-medium text-gray-700 dark:text-gray-300">
+                          Images Available
+                          {award.imageUrl &&
+                            award.imageUrl.length > 1 &&
+                            ` (${award.imageUrl.length})`}
+                        </span>
                       </div>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-600 dark:text-gray-300">
-                        Images Available
-                      </span>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
-                        Certificate photos
-                      </p>
-                    </div>
-                  </div>
-                )}
+                    )}
 
-                {/* No attachments indicator */}
-                {!award.pdfAvailable && !award.imageAvailable && (
-                  <div
-                    className={`text-gray-600 dark:text-gray-200 text-sm italic`}
-                  >
-                    No digital files available for this award
+                    {/* No files indicator */}
+                    {!award.pdfAvailable && !award.imageAvailable && (
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                        <span className="text-gray-500 dark:text-gray-400 text-sm italic">
+                          No digital files available
+                        </span>
+                      </div>
+                    )}
                   </div>
-                )}
+
+                  {/* PDF Icons Row */}
+                  {award.pdfAvailable && award.pdfUrl && (
+                    <div className="flex flex-wrap items-center gap-3 mb-3">
+                      {award.pdfUrl.map((url, index) => (
+                        <div key={index} className="relative group">
+                          <Link href={url} target="_blank" className="block">
+                            <div className="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/30 transition-all duration-200 hover:scale-102 cursor-pointer shadow-sm hover:shadow-md">
+                              <div className="flex items-center space-x-2">
+                                <FaFilePdf className="text-red-600 dark:text-red-400 text-xl" />
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                  {award.pdfName && award.pdfName[index]
+                                    ? award.pdfName[index]
+                                    : `PDF Document ${index + 1}`}
+                                </span>
+                              </div>
+                            </div>
+                          </Link>
+
+                          {/* Hover Tooltip with custom name */}
+                          {/* <div className="absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-gray-800 dark:bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none shadow-lg min-w-[120px] text-center">
+                            {award.pdfName && award.pdfName[index]
+                              ? award.pdfName[index]
+                              : `PDF Document ${index + 1}`}
+                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
+                              <div className="w-2 h-2 bg-gray-800 dark:bg-gray-900 rotate-45"></div>
+                            </div>
+                          </div> */}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Image Icons Row */}
+                  {award.imageAvailable && award.imageUrl && (
+                    <div className="flex flex-wrap items-center gap-3">
+                      {award.imageUrl.map((url, index) => (
+                        <div key={index} className="relative group">
+                          <Link href={url} target="_blank" className="block">
+                            <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all duration-200 hover:scale-102 cursor-pointer shadow-sm hover:shadow-md">
+                              <div className="flex items-center space-x-2">
+                                <FaImage className="text-blue-600 dark:text-blue-400 text-xl" />
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                  {award.imageName && award.imageName[index]
+                                    ? award.imageName[index]
+                                    : `Image ${index + 1}`}
+                                </span>
+                              </div>
+                            </div>
+                          </Link>
+
+                          {/* Hover Tooltip with custom name */}
+                          {/* <div className="absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-gray-800 dark:bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none shadow-lg min-w-[120px] text-center">
+                            {award.imageName && award.imageName[index]
+                              ? award.imageName[index]
+                              : `Image ${index + 1}`}
+                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
+                              <div className="w-2 h-2 bg-gray-800 dark:bg-gray-900 rotate-45"></div>
+                            </div>
+                          </div> */}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Attachment List (if PDF is available) */}
@@ -279,7 +399,7 @@ const AwardsPage = () => {
         </div>
 
         {/* Footer Summary */}
-        <div className="p-6 border-t">
+        <div className="p-6 border-t border-b">
           <div className="grid grid-cols-3 gap-4 text-center">
             <div className="p-3 rounded-sm border">
               <div className="text-2xl font-bold text-gray-600 dark:text-gray-300">
@@ -312,6 +432,9 @@ const AwardsPage = () => {
             </p>
           </div>
         </div>
+
+        {/* main footer */}
+        <Footer />
       </div>
     </div>
   );
