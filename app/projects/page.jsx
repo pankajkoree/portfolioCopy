@@ -15,8 +15,7 @@ const Projects = () => {
       title: "Products API",
       description:
         "Develop, Build, and Test your front-end instantly with our dummy e-commerce API. Get ready-to-use JSON data for products, users,carts, and more — no backend setup required.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "November 26, 2025",
       image: "/productsAPI-high.jpg",
       url: "https://ecommerce-frontend-products.vercel.app/",
       featured: true,
@@ -26,10 +25,9 @@ const Projects = () => {
       title: "Codeforcer Peersite",
       description:
         "Developed a community for codeforce user to be able to connect with other codeforce user from their own universities, and collab with each other with interactive environment",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "November 20, 2025",
       image: "/codeforce.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://codeforcerpeersite-frontend.vercel.app/",
       featured: true,
     },
     {
@@ -37,10 +35,9 @@ const Projects = () => {
       title: "Currency Convertor",
       description:
         "Supports 34 global currencies with real-time, highly accurate exchange rates. Optimized for lightning-fast conversions to keep your workflow smooth and efficient.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "August 18, 2024",
       image: "/currencyconvertor.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://currencyconvertorreactapp.netlify.app/",
       featured: true,
     },
     {
@@ -48,10 +45,9 @@ const Projects = () => {
       title: "Focus On Today",
       description:
         "Focus on your main task, break it into clear steps, and track your progress throughout the day. Review everything by day’s end to ensure your key task is fully completed.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "August 03, 2025",
       image: "/focusontoday.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://focusontoday-tan.vercel.app/",
       featured: true,
     },
     {
@@ -59,10 +55,9 @@ const Projects = () => {
       title: "Movie Details Search",
       description:
         "Search movies by title, genre, or actor, complete with ratings and reviews. Designed for fast, accurate results to help you find the perfect film instantly.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "August 07, 2024",
       image: "/moviedetailssearch.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://moviesearchappomdb.netlify.app/",
       featured: true,
     },
     {
@@ -70,10 +65,9 @@ const Projects = () => {
       title: "The Country Project",
       description:
         "Access detailed economic data, includes GDP, inflation, growth indicators. Optimized for exploring trends, comparing statistics over time.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "September 30, 2025",
       image: "/thecountryproject.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://countrydetailsbypk.vercel.app/",
       featured: true,
     },
     {
@@ -81,10 +75,9 @@ const Projects = () => {
       title: "The Dashboard",
       description:
         "Track and manage your topics of interest in real time with instant updates and insights. All delivered through a clean, simple, and intuitive interface designed for effortless use.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "December 09, 2024",
       image: "/thedashboard.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://dashboard-tesla-ui.vercel.app/dashboard",
       featured: false,
     },
     {
@@ -92,10 +85,9 @@ const Projects = () => {
       title: "The Hamburger",
       description:
         "Made with 100% fresh chicken patties, perfectly grilled for rich, satisfying flavor.Customize it your way with a wide variety of delicious toppings.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "July 07, 2024",
       image: "/thehamburger.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://hamburgermenuappnweb.netlify.app/",
       featured: false,
     },
     {
@@ -103,10 +95,9 @@ const Projects = () => {
       title: "The Shoe Company",
       description:
         "Durable, comfortable footwear designed for every occasion. Enjoy fast, reliable delivery right to your door.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "July 16, 2024",
       image: "/theshoecompany.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://theshoecompany-tailwind.netlify.app/",
       featured: false,
     },
     {
@@ -114,10 +105,9 @@ const Projects = () => {
       title: "Weather App",
       description:
         "Get real-time weather updates for any location with precise hourly and daily forecasts.Optimized for fast, easy tracking so you always stay ahead of the weather.",
-      date: "Dec 01, 2025",
-      codeUrl: "https://github.com/pankajkoree/ecommerce-frontend",
+      date: "August 05, 2024",
       image: "/theweatherapp.png",
-      url: "https://ecommerce-frontend-products.vercel.app/",
+      url: "https://weatherappchallengejs.netlify.app/",
       featured: false,
     },
   ];
@@ -207,13 +197,6 @@ const Projects = () => {
                         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                           {blog.description}
                         </p>
-                        <a href={blog.codeUrl} target="_blank">
-                          <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800">
-                            <span className="text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-                              Code base
-                            </span>
-                          </div>
-                        </a>
                       </div>
                     </div>
                   </Link>
