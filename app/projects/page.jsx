@@ -110,6 +110,16 @@ const Projects = () => {
       url: "https://weatherappchallengejs.netlify.app/",
       featured: false,
     },
+    {
+      id: 11,
+      title: "Decision Tracker",
+      description:
+        "Tiny Decisions is a personal decision-tracking app that helps users log everyday choices - from career moves to life changes. ",
+      date: "April 05, 2025",
+      image: "/decisiontracker.png",
+      url: "https://decisiontracker.vercel.app/",
+      featured: false,
+    },
   ];
 
   const featuredBlogs = blogs.filter((blog) => blog.featured);
@@ -257,10 +267,7 @@ const Projects = () => {
                               <Calendar className="h-3 w-3" />
                               <span>{blog.date}</span>
                             </div>
-                            <div className="flex items-center gap-1">
-                              <Clock className="h-3 w-3" />
-                              <span>{blog.readTime}</span>
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
