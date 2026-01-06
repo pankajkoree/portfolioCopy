@@ -102,7 +102,7 @@ const NavBar = () => {
         <div className="flex justify-end">
           <div onClick={playShutter} className="hover:cursor-pointer">
             {isDarkMode ? (
-              <div className="flex inset-shadow-sm inset-shadow-gray-200 rounded-sm p-2 hover:bg-[#4778ad] transition-colors">
+              <div className="flex inset-shadow-sm inset-shadow-black rounded-sm p-2 hover:bg-[#29292b] transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
