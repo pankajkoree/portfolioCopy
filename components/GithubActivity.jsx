@@ -55,7 +55,7 @@ export default function GitHubHeatmap() {
             onChange={(e) => setYear(Number(e.target.value))}
             className="border dark:border-zinc-700 text-sm px-3 py-1.5 rounded-md bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
-            {[2020, 2021, 2022, 2023, 2024, 2025].map((y) => (
+            {[2020, 2021, 2022, 2023, 2024, 2025, 2026].map((y) => (
               <option key={y} value={y}>
                 {y}
               </option>
