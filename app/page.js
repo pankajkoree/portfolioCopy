@@ -14,7 +14,6 @@ import WhatIDo from "@/components/WhatIDo";
 import Details from "@/components/Details";
 import HonorsAndAwards from "@/components/HonorsAndAwards";
 import Certifications from "@/components/Certifications";
-import GitHubHeatmap from "@/components/GithubActivity";
 import TechStack from "@/components/TechStack";
 import Footer from "@/components/Footer";
 import Blogs from "@/components/Blogs";
@@ -115,9 +114,6 @@ export default function Home() {
 
         {/* socials */}
         <Socials />
-
-        {/* github */}
-        <GitHubHeatmap />
 
         {/* tech stach */}
         <TechStack />
